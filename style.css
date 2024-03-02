@@ -1,0 +1,432 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	color: white;
+	font-family: Helvetica;
+}
+
+body {
+	background-color: rgb(35, 35, 35);
+	height: 100vh;
+	position: relative;
+	z-index: -3;
+}
+
+#mainbg {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	z-index: -2;
+	position: relative;
+	background: url(Assets/IN-en-20240115-trifectadaily-perspective_alpha_website_large.jpg);
+	background-size: 125%;
+	background-position: -190px -272px;
+	height: 100%;
+}
+
+#mainbg::before {
+	z-index: -1;
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(
+		rgba(0, 0, 0, 0.9),
+		rgba(0, 0, 0, 0.4) 35%,
+		rgba(0, 0, 0, 0.4) 45%,
+		rgba(0, 0, 0, 0.9)
+	);
+}
+
+header {
+	width: 100%;
+	height: 70px;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding: 24px 150px;
+}
+
+header > div:last-of-type {
+	display: flex;
+	align-items: flex-start;
+	margin-top: 5px;
+	margin-right: 28px;
+	column-gap: 8px;
+}
+
+#logo img {
+	width: 150px;
+	margin-left: 24px;
+}
+
+#lang-selector {
+	color: white;
+	display: flex;
+	align-items: flex-start;
+	align-self: flex-start;
+	column-gap: 8px;
+	margin-right: 20px;
+	border: 1px solid rgba(130, 130, 130, 0.74);
+	padding: 8px 15px 5px 10px;
+	border-radius: 4px;
+	background-color: rgba(20, 20, 20, 0.416);
+}
+
+#lang-selector i {
+	font-size: 10px;
+	align-self: center;
+	margin-left: 2px;
+	margin-right: 2px;
+	columns: inherit;
+}
+
+#lang-selector iconify-icon {
+	font-size: 16px;
+	margin-top: 0;
+	color: inherit;
+}
+
+#lang {
+	color: inherit;
+	font-size: 15px;
+	appearance: none;
+	background-color: transparent;
+	border: none;
+	font-weight: 600;
+}
+
+#lang option {
+	color: black;
+}
+
+.red-btn {
+	background-color: rgb(224, 0, 0);
+	border-radius: 4px;
+	border: none;
+}
+
+.red-btn:hover {
+	cursor: pointer;
+}
+
+#signin-btn {
+	width: 80px;
+	height: 32px;
+	font-weight: 600;
+	font-size: 14px;
+}
+
+#container {
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 30px;
+}
+
+#intro {
+	width: 100%;
+	display: flex;
+	margin-top: auto;
+	flex-direction: column;
+	row-gap: 20px;
+	align-items: center;
+	justify-content: center;
+}
+
+h1 {
+	font-size: 3rem;
+	font-weight: 900;
+}
+
+h2 {
+	font-size: 1.5rem;
+	font-weight: 400;
+}
+
+#membership {
+	margin-top: 20px;
+	margin-bottom: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#membership > h3 {
+	margin-top: 5px;
+	font-size: 1.25rem;
+	font-weight: 400;
+}
+
+#membership-input {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: row;
+	column-gap: 10px;
+	height: 56px;
+}
+
+#input-holder {
+	width: 370px;
+	height: 100%;
+	border: 1px solid gray;
+	padding: 8px 12px 6px;
+	border-radius: 4px;
+	background-color: rgba(20, 20, 20, 0.637);
+	display: flex;
+	flex-direction: column;
+}
+
+#input-holder:hover {
+	cursor: text;
+}
+
+#input-heading {
+	color: gray;
+	font-size: 0.7rem;
+	font-weight: 500;
+}
+
+#input-holder > input {
+	appearance: none;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	border: none;
+}
+
+#membership-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 10px;
+	width: 210px;
+	height: 100%;
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+#membership-btn > i {
+	font-size: 1rem;
+}
+
+#features {
+	width: 100%;
+}
+
+.feature {
+	margin-top: 8px;
+	background-color: black;
+	height: 80vh;
+	width: 100%;
+	padding: 3.5rem 0;
+}
+
+.content {
+	margin: auto;
+	max-width: 80%;
+	display: flex;
+	align-items: center;
+}
+
+.text {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	row-gap: 10px;
+	width: 50%;
+	padding-right: 1rem;
+}
+
+.media {
+	width: 50%;
+	position: relative;
+}
+
+#tv > img,
+#devices > img {
+	position: relative;
+	z-index: 2;
+	width: 100%;
+}
+
+#tv > video {
+	position: absolute;
+	top: 20%;
+	left: 13%;
+	width: 80%;
+}
+
+#mobile {
+	text-align: right;
+}
+
+#mobileimg {
+	max-width: 90%;
+}
+
+#downloading {
+	position: absolute;
+	width: 50%;
+	height: 100px;
+	bottom: 7%;
+	left: 30%;
+	background-color: black;
+	border: 2px solid gray;
+	border-radius: 10px;
+	display: flex;
+	column-gap: 15px;
+	align-items: center;
+	padding: 10px;
+}
+
+#movieimg {
+	height: 100%;
+}
+
+#text-info {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+#title {
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+#download-status {
+	font-size: 0.875rem;
+	font-weight: 400;
+	color: blue;
+}
+
+#animation {
+	height: 3.75rem;
+	width: 3rem;
+	background: url(Assets/download-icon.gif) center center no-repeat;
+	background-size: 100%;
+	margin-left: auto;
+}
+
+#devices-videoholder {
+	position: absolute;
+	top: 8%;
+	left: 18%;
+	width: 62%;
+	height: 50%;
+	overflow: hidden;
+}
+
+#kids > img {
+	width: 100%;
+}
+
+#faqs {
+	width: 100%;
+	background-color: black;
+	margin-top: 8px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+	align-items: center;
+	padding: 4.5rem 0;
+}
+
+#faqs > h1 {
+	margin-bottom: 15px;
+}
+
+#faqs input {
+	display: none;
+}
+
+.faq {
+	width: 78%;
+	display: flex;
+	flex-direction: column;
+	row-gap: 2px;
+}
+
+.question {
+	background-color: rgb(45, 45, 45);
+	width: 100%;
+	height: 85px;
+	padding: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+}
+
+.question:hover {
+	background-color: rgb(65, 65, 65);
+}
+
+.question > i {
+	font-size: 2rem;
+	font-weight: 400;
+	transition: transform 0.1s;
+}
+
+#faqs input:checked + label > i {
+	transform: rotate(45deg);
+}
+
+#faqs input:checked + label + .answer {
+	display: block;
+}
+
+.answer {
+	background-color: rgb(45, 45, 45);
+	width: 100%;
+	display: none;
+	padding: 28px 20px;
+	align-items: center;
+}
+
+footer {
+	margin-top: 8px;
+	width: 100%;
+	background-color: black;
+	padding: 4rem 10rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	row-gap: 15px;
+}
+
+footer * {
+	color: rgba(255, 255, 255, 0.7);
+}
+
+#contact {
+	text-align: left;
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+#contact > span {
+	text-decoration: underline;
+}
+
+#links {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.link {
+	width: 25%;
+	margin: 10px 0px;
+	font-size: 0.875rem;
+	font-weight: 400;
+}
+
+#end-caption {
+	font-size: 0.875rem;
+	font-weight: 400;
+}
